@@ -147,7 +147,14 @@
     "sections": [
       {
         "h": "1. Общая информация",
-        "p": "Настоящая Политика конфиденциальности описывает, каким образом компания LONDON ROUTE TRANSFERS обрабатывает персональные данные пользователей сайта. Компания: LONDON ROUTE TRANSFERS LTD. Юрисдикция: Англия и Уэльс. Регистрационный номер: 00000000. Юридический адрес: 10 Example House, London, United Kingdom. LONDON ROUTE TRANSFERS является оператором персональных данных в соответствии с требованиями UK GDPR."
+        "p": "Настоящая Политика конфиденциальности описывает, каким образом компания LONDON ROUTE TRANSFERS обрабатывает персональные данные пользователей сайта.",
+        "items": [
+          "Компания: LONDON ROUTE TRANSFERS LTD",
+          "Юрисдикция: Англия и Уэльс",
+          "Регистрационный номер: 00000000",
+          "Юридический адрес: 10 Example House, London, United Kingdom",
+          "LONDON ROUTE TRANSFERS является оператором персональных данных в соответствии с требованиями UK GDPR"
+        ]
       },
       {
         "h": "2. Какие данные мы собираем",
@@ -475,5 +482,34 @@
         "p": "Компания оставляет за собой право изменять настоящие Условия. Актуальная версия публикуется на сайте."
       }
     ]
+  },
+  "Manager": {
+    "title": "Панель менеджера",
+    "description": "Внутренний интерфейс для управления заявками на бронирование.",
+    "noBookings": "Нет заявок, соответствующих выбранному фильтру.",
+    "filterAll": "Все",
+    "filterPending": "Ожидают",
+    "filterConfirmed": "Подтверждены",
+    "filterCompleted": "Выполнены",
+    "filterCancelled": "Отменены",
+    "tableId": "№ заявки",
+    "tableClient": "Клиент",
+    "tablePhone": "Телефон",
+    "tableEmail": "Email",
+    "tableService": "Услуга",
+    "tableRoute": "Маршрут",
+    "tableDate": "Дата / Время",
+    "tablePassengers": "Пасс.",
+    "tableStatus": "Статус",
+    "tableActions": "Действия",
+    "statusPending": "Ожидает",
+    "statusConfirmed": "Подтвержден",
+    "statusCompleted": "Выполнен",
+    "statusCancelled": "Отменен",
+    "serviceAirport": "Аэропорт",
+    "serviceCorporate": "Корпоративный",
+    "serviceGroup": "Групповой",
+    "servicePrivate": "Частный",
+    "createdLabel": "Создана"
   }
 }

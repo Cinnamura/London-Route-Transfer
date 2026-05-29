@@ -512,5 +512,34 @@
         "p": "The company reserves the right to amend these Terms. The current version is published on the website."
       }
     ]
+  },
+  "Manager": {
+    "title": "Manager Panel",
+    "description": "Internal interface for managing booking requests.",
+    "noBookings": "No bookings match the selected filter.",
+    "filterAll": "All",
+    "filterPending": "Pending",
+    "filterConfirmed": "Confirmed",
+    "filterCompleted": "Completed",
+    "filterCancelled": "Cancelled",
+    "tableId": "ID",
+    "tableClient": "Client",
+    "tablePhone": "Phone",
+    "tableEmail": "Email",
+    "tableService": "Service",
+    "tableRoute": "Route",
+    "tableDate": "Date / Time",
+    "tablePassengers": "Pax",
+    "tableStatus": "Status",
+    "tableActions": "Actions",
+    "statusPending": "Pending",
+    "statusConfirmed": "Confirmed",
+    "statusCompleted": "Completed",
+    "statusCancelled": "Cancelled",
+    "serviceAirport": "Airport",
+    "serviceCorporate": "Corporate",
+    "serviceGroup": "Group",
+    "servicePrivate": "Private",
+    "createdLabel": "Created"
   }
 }
