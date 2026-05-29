@@ -24,6 +24,56 @@
     "contact": "Contact",
     "copyright": "© LONDON ROUTE TRANSFERS, 2009–2026. All rights reserved."
   },
+  "Home": {
+    "heroTitle": "Comfortable and reliable transfers in London — airports, business and private travel",
+    "heroSubtitle": "Passenger transport services with professional drivers and executive vehicles",
+    "heroDescription": "We work with private clients, companies, educational institutions and tour groups",
+    "heroCta": "Order a Transfer",
+    "heroNote": "We will contact you during business hours to arrange the details.",
+    "aboutTitle": "LONDON ROUTE TRANSFERS — a trusted passenger transport operator in London",
+    "aboutSubtitle": "Transfers, corporate transport and group travel",
+    "aboutText": "LONDON ROUTE TRANSFERS is a transport company that organises passenger transport in London and beyond. We work with private clients, companies and groups. We structure every trip as a managed process — from receiving the request to completing the route. This approach ensures a consistent level of service, regardless of the transport format and number of passengers.",
+    "servicesTitle": "Transfers and transport for every need",
+    "servicesSubtitle": "We organise trips across London and beyond — from individual transfers to group and corporate transport.",
+    "serviceAirportTitle": "Airport Transfers",
+    "serviceAirportDesc": "Transfers to Heathrow, Gatwick, Stansted, Luton and London City. Meet and greet, baggage assistance, flight monitoring.",
+    "serviceCorporateTitle": "Corporate Transport",
+    "serviceCorporateDesc": "Transport for employees and clients. Vehicles for business events and regular routes.",
+    "serviceGroupTitle": "Group Travel",
+    "serviceGroupDesc": "Minibuses and coaches for groups. Schools, tourists, corporate trips.",
+    "servicePrivateTitle": "Private Travel",
+    "servicePrivateDesc": "Weddings, events, city trips and beyond. Adapting vehicles to client requirements.",
+    "advantagesHeading": "Key Advantages",
+    "advantagesItems": [
+      "Executive and business-class vehicles",
+      "Minibuses and coaches for groups",
+      "Scalability to match order volume",
+      "Single operator for different transport formats",
+      "Vehicle adaptation to client needs"
+    ],
+    "benefitsTitle": "Why clients choose LONDON ROUTE TRANSFERS for private and corporate transport",
+    "benefitsSubtitle": "We work with private and corporate clients, providing managed and predictable transport solutions",
+    "benefitsText": "LONDON ROUTE TRANSFERS is focused on working with various client categories — from private customers to companies and organised groups. Our operating model allows us to adapt the transport format to each client's needs while maintaining a consistent service level and control regardless of order scale.",
+    "benefitsNoUniversal": "We don't offer one-size-fits-all solutions — every trip is built around the client's requirements, trip format and organisational conditions.",
+    "benefitsClientsHeading": "Who our services are for",
+    "benefitsClientsItems": [
+      "Private clients: individual trips, airport transfers, family routes and private events",
+      "Corporate clients: companies needing systematic transport for employees, guests, meetings and events",
+      "Educational institutions: schools, colleges and universities organising student and group trips",
+      "Tour groups: tour operators, travellers and trip organisers",
+      "Event organisers: weddings, private events, corporate outings"
+    ],
+    "benefitsWhyHeading": "Why choose LONDON ROUTE TRANSFERS",
+    "benefitsWhyItems": [
+      "Registered UK company with extensive experience",
+      "Own fleet with scalability to match client needs",
+      "Both individual and group transport",
+      "Work with private, corporate and institutional clients",
+      "Centralised management and control at every stage",
+      "Single point of accountability for the client",
+      "Flexible operating model adaptable to different order formats"
+    ]
+  },
   "Stub": {
     "bookTitle": "Book a Transfer",
     "bookDescription": "Fill in the booking form and we will contact you to confirm the details.",
