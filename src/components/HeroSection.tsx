@@ -1,45 +1,16 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
+import ParallaxHero from './ui/ParallaxHero'
 
 export default function HeroSection() {
   const t = useTranslations('Home')
-  const [offsetY, setOffsetY] = useState(0)
-  const ticking = useRef(false)
-
-  useEffect(() => {
-    function handleScroll() {
-      if (!ticking.current) {
-        window.requestAnimationFrame(() => {
-          setOffsetY(window.scrollY)
-          ticking.current = false
-        })
-        ticking.current = true
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-sky-100 via-sky-50 to-white min-h-[80dvh] flex items-center">
-      {/* Background image with subtle parallax */}
-      <div
-        className="pointer-events-none absolute inset-0 -top-16 -bottom-16"
-        style={{ transform: `translateY(${offsetY * 0.18}px)` }}
-      >
-        <img
-          src="/Background.png"
-          alt=""
-          className="h-full w-full object-cover opacity-30 blur-[2px]"
-          aria-hidden
-        />
-      </div>
+      <ParallaxHero />
 
-      {/* Gradient fade-out at the bottom */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent via-white/40 to-white" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-36 w-full">

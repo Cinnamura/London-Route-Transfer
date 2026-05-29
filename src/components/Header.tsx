@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import LocaleSwitcher from './LocaleSwitcher'
@@ -8,13 +8,25 @@ import LocaleSwitcher from './LocaleSwitcher'
 export default function Header() {
   const t = useTranslations('Header')
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const ticking = useRef(false)
 
-  const navLinks = [
-    { href: '/', label: t('navHome') },
-    { href: '/#services', label: t('navServices') },
-    { href: '/book', label: t('navBook') },
-    { href: '/manager', label: t('navManager') },
-  ]
+  useEffect(() => {
+    function handleScroll() {
+      if (!ticking.current) {
+        requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20)
+          ticking.current = false
+        })
+        ticking.current = true
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
@@ -23,14 +35,31 @@ export default function Header() {
 
   const close = () => setIsOpen(false)
 
+  const navLinks = [
+    { href: '/', label: t('navHome') },
+    { href: '/#services', label: t('navServices') },
+    { href: '/book', label: t('navBook') },
+    { href: '/manager', label: t('navManager') },
+  ]
+
   return (
     <>
-      <header className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-md border-b border-white/40">
+      <header
+        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+          isScrolled
+            ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100/60'
+            : 'bg-white/0 shadow-none border-b border-transparent'
+        }`}
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between gap-4">
             <Link
               href="/"
-              className="shrink-0 text-sm sm:text-base font-semibold tracking-tight text-slate-900 hover:text-sky-600 transition-colors"
+              className={`shrink-0 text-sm sm:text-base font-semibold tracking-tight transition-colors duration-300 ${
+                isScrolled
+                  ? 'text-slate-900 hover:text-sky-600'
+                  : 'text-slate-900 hover:text-sky-600'
+              }`}
             >
               <span className="hidden sm:inline">LONDON ROUTE TRANSFERS</span>
               <span className="sm:hidden">LRT</span>
@@ -41,7 +70,11 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-slate-600 hover:text-sky-600 transition-colors"
+                  className={`text-sm font-medium transition-colors duration-300 ${
+                    isScrolled
+                      ? 'text-slate-600 hover:text-sky-600'
+                      : 'text-slate-600 hover:text-sky-600'
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -59,18 +92,22 @@ export default function Header() {
                 aria-label={isOpen ? 'Close menu' : 'Open menu'}
               >
                 <span
-                  className={`block h-0.5 w-5 bg-slate-900 rounded-full transition-all duration-300 ${
-                    isOpen ? 'rotate-45 translate-y-1.5' : ''
+                  className={`block h-0.5 w-5 rounded-full transition-all duration-300 ${
+                    isOpen
+                      ? 'rotate-45 translate-y-1.5 bg-slate-900'
+                      : 'bg-slate-900'
                   }`}
                 />
                 <span
-                  className={`block h-0.5 w-5 bg-slate-900 rounded-full transition-all duration-300 mt-1 ${
-                    isOpen ? 'opacity-0' : ''
+                  className={`block h-0.5 w-5 rounded-full transition-all duration-300 mt-1 ${
+                    isOpen ? 'opacity-0' : 'bg-slate-900'
                   }`}
                 />
                 <span
-                  className={`block h-0.5 w-5 bg-slate-900 rounded-full transition-all duration-300 mt-1 ${
-                    isOpen ? '-rotate-45 -translate-y-1.5' : ''
+                  className={`block h-0.5 w-5 rounded-full transition-all duration-300 mt-1 ${
+                    isOpen
+                      ? '-rotate-45 -translate-y-1.5 bg-slate-900'
+                      : 'bg-slate-900'
                   }`}
                 />
               </button>
