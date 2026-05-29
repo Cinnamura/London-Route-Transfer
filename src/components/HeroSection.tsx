@@ -34,13 +34,13 @@ export default function HeroSection() {
         <img
           src="/Background.png"
           alt=""
-          className="h-full w-full object-cover opacity-[0.12] blur-[1.5px]"
+          className="h-full w-full object-cover opacity-30 blur-[2px]"
           aria-hidden
         />
       </div>
 
       {/* Gradient fade-out at the bottom */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent via-white/60 to-white" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent via-white/40 to-white" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-36 w-full">
         <div className="max-w-3xl">
