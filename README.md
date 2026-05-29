@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# London Route Transfers
 
-## Getting Started
+**Премиальный сервис заказа трансферов в Лондоне** — многоязычное веб-приложение на Next.js с формой бронирования, панелью управления заказами и полным набором юридических страниц.
 
-First, run the development server:
+## Ключевые фишки интерфейса
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Эффект параллакса** — фоновое изображение London skyline с `opacity-30 blur-[2px]` и градиентной маской `via-white/40` для глубины
+- **Editorial Split Showcase** — журнальный сплит-каталог услуг: на десктопе левая/правая панель (5 + 7 колонок) с переключением по наведению; на мобильных — аккордеон с анимацией `animate-fade-in`
+- **Стеклянная морфология (Glassmorphism)** — все карточки, хедер, селектор языка и таблица менеджера используют `bg-white/60 backdrop-blur-md border border-white/40`
+- **Интерактивная админка** — панель менеджера с фильтрацией по статусу, выпадающим списком для смены статуса и цветными бейджами (amber/sky/emerald/rose)
+
+## Стек технологий
+
+| Технология | Версия | Особенности |
+|---|---|---|
+| **Next.js** | 16.2.6 | App Router, Turbopack, новая конвенция `proxy.ts` (вместо `middleware.ts`) |
+| **React** | 19 | Server Components по умолчанию |
+| **TypeScript** | 5 | Строгая типизация без `any` |
+| **Tailwind CSS** | 4 | CSS-first конфигурация через `@theme`, без `tailwind.config.js` |
+| **next-intl** | 4 | i18n маршрутизация (с/без префикса локали), typed-переводы |
+| **React Hook Form** | — | Управление формой с производительной перерисовкой |
+| **Zod** | 4.4.3 | Валидация форм через `zodResolver` |
+
+## Структура проекта
+
+```
+london-route-transfers/
+├── messages/                    # Файлы локализации (en, ru)
+│   ├── en.json
+│   └── ru.json
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx           # Пасс-тру корень (без <html>/<body>)
+│   │   ├── favicon.ico
+│   │   └── [locale]/
+│   │       ├── layout.tsx       # Корневой лэйаут: <html>, <body>, шрифты, Header, Footer
+│   │       ├── globals.css      # Токены @theme, анимации, smooth scroll
+│   │       ├── page.tsx         # Лендинг (Hero + About + Services + Benefits)
+│   │       ├── book/
+│   │       │   ├── layout.tsx   # Метаданные страницы бронирования
+│   │       │   └── page.tsx     # Форма бронирования (Client Component)
+│   │       ├── manager/
+│   │       │   └── page.tsx     # Панель менеджера (Client Component)
+│   │       ├── privacy/
+│   │       │   └── page.tsx     # Политика конфиденциальности
+│   │       ├── terms/
+│   │       │   └── page.tsx     # Условия использования
+│   │       ├── cookies/
+│   │       │   └── page.tsx     # Политика cookie
+│   │       └── services-terms/
+│   │           └── page.tsx     # Условия предоставления услуг
+│   ├── components/
+│   │   ├── Header.tsx           # Server Component (навигация, логотип)
+│   │   ├── Footer.tsx           # Server Component (реквизиты, ссылки на политики)
+│   │   ├── LocaleSwitcher.tsx   # Client Component (переключатель en/ru)
+│   │   ├── HeroSection.tsx      # Client Component (параллакс + градиент)
+│   │   └── ServicesShowcase.tsx # Client Component (Editorial Split Showcase)
+│   ├── i18n/
+│   │   ├── routing.ts           # defineRouting (locales, defaultLocale)
+│   │   ├── request.ts           # getRequestConfig (динамическая загрузка messages)
+│   │   ├── navigation.ts        # createNavigation (Link, redirect, usePathname)
+│   │   └── global.ts            # Типизация Messages
+│   ├── schemas/
+│   │   └── booking.ts           # Zod-схема бронирования (getBookingSchema)
+│   ├── mocks/
+│   │   └── bookings.ts          # 5 мок-бронирований для панели менеджера
+│   ├── proxy.ts                 # next-intl middleware (export function proxy)
+│   └── ...
+├── next.config.ts               # withNextIntl плагин
+├── eslint.config.mjs            # ESLint flat config
+├── AGENTS.md                    # Правила и конвенции проекта
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Установка и запуск
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Клонирование
+git clone <repository-url>
+cd london-route-transfers
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Установка зависимостей
+npm install
 
-## Learn More
+# Режим разработки (Turbopack)
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# Продакшн-сборка
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Запуск продакшн-сервера
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Архитектурные решения
 
-## Deploy on Vercel
+### Разделение формы и валидации
+Схема Zod вынесена в отдельный модуль `src/schemas/booking.ts` и использует фабрику `getBookingSchema(t)`, принимающую функцию перевода. Это позволяет получить локализованные сообщения об ошибках, не смешивая валидацию с JSX.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### i18n и переключение языков
+- next-intl `defineRouting` настраивает маршрутизацию с префиксом локали (`/en/book`, `/ru/manager`)
+- `proxy.ts` (Next.js 16 конвенция вместо `middleware.ts`) перехватывает запросы и определяет локаль
+- Все строки интерфейса хранятся в `messages/{locale}.json` — никакого хардкода в компонентах
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Архитектура страниц
+- Все страницы — Server Components по умолчанию
+- Client Components используются только для интерактивных элементов (форма, переключатель языка, карусель услуг, панель менеджера)
+- `params` — всегда Promise (Next.js 16), требуется `await params`
+
+### Стеклянная морфология (Glassmorphism)
+Единый паттерн `bg-white/60 backdrop-blur-md border border-white/40` применяется во всех карточках, создавая премиальный полупрозрачный эффект на градиентном фоне.
+
+### Анимации
+Кастомные анимации в `globals.css`: `fade-in`, `fade-out`, `slide-up-fade` — используются при переключении услуг в Editorial Showcase и при смене статуса формы.

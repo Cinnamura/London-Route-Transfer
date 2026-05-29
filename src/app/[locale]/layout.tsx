@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
-import { routing } from '@/i18n/routing'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import './globals.css'
@@ -41,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params
 
-  if (!routing.locales.includes(locale as any)) {
+  if (locale !== 'en' && locale !== 'ru') {
     notFound()
   }
 

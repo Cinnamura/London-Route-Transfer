@@ -23,7 +23,7 @@ export default function BookingFormPage() {
     handleSubmit,
     formState: { errors },
   } = useForm<BookingFormData>({
-    resolver: zodResolver(getBookingSchema((key) => tErr(key as any))),
+    resolver: zodResolver(getBookingSchema(tErr as (key: string) => string)),
     defaultValues: {
       company: '',
       additionalInfo: '',
