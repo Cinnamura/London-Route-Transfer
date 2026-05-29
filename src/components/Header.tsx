@@ -85,8 +85,21 @@ export default function Header() {
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
         }`}
+        onClick={close}
       >
-        <div className="min-h-dvh bg-white/95 backdrop-blur-xl flex flex-col items-center justify-center px-6">
+        <div
+          className="relative min-h-dvh bg-white/95 backdrop-blur-xl flex flex-col items-center justify-center px-6"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            onClick={close}
+            className="absolute top-4 right-4 flex flex-col items-center justify-center w-10 h-10 rounded-lg hover:bg-slate-100/50 transition-colors"
+            aria-label="Close menu"
+          >
+            <span className="block h-0.5 w-5 bg-slate-900 rounded-full rotate-45 translate-y-0.5" />
+            <span className="block h-0.5 w-5 bg-slate-900 rounded-full -rotate-45 -translate-y-0.5" />
+          </button>
+
           <nav className="flex flex-col items-center gap-8 mb-12">
             {navLinks.map((link, i) => (
               <Link
