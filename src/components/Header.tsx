@@ -93,11 +93,11 @@ export default function Header() {
         >
           <button
             onClick={close}
-            className="absolute top-4 right-4 flex flex-col items-center justify-center w-10 h-10 rounded-lg hover:bg-slate-100/50 transition-colors"
+            className="absolute top-4 right-4 flex items-center justify-center w-10 h-10 rounded-lg hover:bg-slate-100/50 transition-colors"
             aria-label="Close menu"
           >
-            <span className="block h-0.5 w-5 bg-slate-900 rounded-full rotate-45 translate-y-0.5" />
-            <span className="block h-0.5 w-5 bg-slate-900 rounded-full -rotate-45 -translate-y-0.5" />
+            <span className="absolute inset-0 m-auto w-5 h-0.5 bg-slate-900 rounded-full rotate-45" />
+            <span className="absolute inset-0 m-auto w-5 h-0.5 bg-slate-900 rounded-full -rotate-45" />
           </button>
 
           <nav className="flex flex-col items-center gap-8 mb-12">
