@@ -16,7 +16,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ## Critical Next.js 16 differences
 
-- `middleware.ts` renamed to **`proxy.ts`** with `export function proxy()`
+- i18n routing is in **`src/middleware.ts`** using `next-intl/middleware` (see [next-intl docs](https://next-intl.dev/docs/routing/middleware))
 - `next lint` **removed** — use ESLint directly
 - All `params` are **Promises** — must `await params` in every page/layout/metadata
 - Only the root layout at `app/[locale]/layout.tsx` contains `<html>` / `<body>`
@@ -51,7 +51,7 @@ src/
 messages/
   en.json             ← English locale
   ru.json             ← Russian locale
-proxy.ts              ← next-intl createMiddleware exported as `proxy`
+src/middleware.ts      ← next-intl createMiddleware for locale routing
 next.config.ts        ← withNextIntl plugin
 ```
 
