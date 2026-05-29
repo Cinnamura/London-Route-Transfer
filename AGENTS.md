@@ -16,7 +16,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ## Critical Next.js 16 differences
 
-- i18n routing is in **`src/middleware.ts`** using `next-intl/middleware` (see [next-intl docs](https://next-intl.dev/docs/routing/middleware))
+- i18n routing is in **`src/proxy.ts`** using `next-intl/middleware` (see [next-intl docs](https://next-intl.dev/docs/routing/middleware))
 - `next lint` **removed** — use ESLint directly
 - All `params` are **Promises** — must `await params` in every page/layout/metadata
 - Only the root layout at `app/[locale]/layout.tsx` contains `<html>` / `<body>`
@@ -51,7 +51,7 @@ src/
 messages/
   en.json             ← English locale
   ru.json             ← Russian locale
-src/middleware.ts      ← next-intl createMiddleware for locale routing
+src/proxy.ts           ← next-intl createMiddleware exported as `proxy`
 next.config.ts        ← withNextIntl plugin
 ```
 
@@ -82,6 +82,8 @@ next.config.ts        ← withNextIntl plugin
 - Stub pages use `getTranslations('Stub')` — replace with real content later
 - Form validation schema lives in `src/schemas/booking.ts` (separate from JSX)
 - Mock data lives in `src/mocks/bookings.ts` with `BookingManagerItem` interface
+- Layout validates locale via `if (!routing.locales.includes(locale)) notFound()`
+- `<html>` element MUST have `data-scroll-behavior="smooth"` to suppress Next.js warning
 - Build before committing: `npm run build` must pass
 
 ## Files from requirements (do not delete)
