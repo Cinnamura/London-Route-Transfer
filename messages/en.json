@@ -1,0 +1,42 @@
+{
+  "Metadata": {
+    "title": "LONDON ROUTE TRANSFERS — Airport transfers, corporate and private travel in London",
+    "description": "Passenger transport services in London: airport transfers to Heathrow, Gatwick, Stansted, Luton, London City. Corporate transport, group travel and private trips."
+  },
+  "Header": {
+    "navHome": "Home",
+    "navServices": "Services",
+    "navBook": "Book Now",
+    "navManager": "Manager Panel"
+  },
+  "Footer": {
+    "companyName": "LONDON ROUTE TRANSFERS LTD",
+    "legalForm": "Private Limited Company registered in England and Wales",
+    "companyNumber": "Company Number: 00000000",
+    "registeredOffice": "Registered Office: 10 Example House, London, United Kingdom",
+    "vatNumber": "VAT Number: GB 000000000",
+    "legalInfo": "All information on this website is for informational purposes only and does not constitute a public offer unless expressly stated otherwise. LONDON ROUTE TRANSFERS takes reasonable measures to ensure the accuracy and relevance of the information, but is not liable for any inaccuracies or changes in service conditions.",
+    "policies": "Policies & Documents",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePolicy": "Cookie Policy",
+    "termsOfUse": "Terms of Use",
+    "servicesTerms": "Service Terms",
+    "contact": "Contact",
+    "copyright": "© LONDON ROUTE TRANSFERS, 2009–2026. All rights reserved."
+  },
+  "Stub": {
+    "bookTitle": "Book a Transfer",
+    "bookDescription": "Fill in the booking form and we will contact you to confirm the details.",
+    "managerTitle": "Manager Panel",
+    "managerDescription": "Internal interface for viewing booking requests.",
+    "privacyTitle": "Privacy Policy",
+    "privacyDescription": "LONDON ROUTE TRANSFERS privacy policy in accordance with UK GDPR.",
+    "cookiesTitle": "Cookie Policy",
+    "cookiesDescription": "How LONDON ROUTE TRANSFERS uses cookies and similar technologies.",
+    "termsTitle": "Terms of Use",
+    "termsDescription": "Terms and conditions for using the LONDON ROUTE TRANSFERS website.",
+    "servicesTermsTitle": "Service Terms",
+    "servicesTermsDescription": "Terms and conditions for the provision of transport services by LONDON ROUTE TRANSFERS.",
+    "pageUnderConstruction": "This page is under construction."
+  }
+}

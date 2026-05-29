@@ -1,0 +1,42 @@
+{
+  "Metadata": {
+    "title": "LONDON ROUTE TRANSFERS — Аэропортовые трансферы, корпоративный и частный транспорт в Лондоне",
+    "description": "Услуги пассажирских перевозок в Лондоне: трансферы в аэропорты Heathrow, Gatwick, Stansted, Luton, London City. Корпоративный транспорт, групповые и частные поездки."
+  },
+  "Header": {
+    "navHome": "Главная",
+    "navServices": "Услуги",
+    "navBook": "Заказать",
+    "navManager": "Менеджер"
+  },
+  "Footer": {
+    "companyName": "LONDON ROUTE TRANSFERS LTD",
+    "legalForm": "Private Limited Company, зарегистрирована в Англии и Уэльсе",
+    "companyNumber": "Регистрационный номер: 00000000",
+    "registeredOffice": "Юридический адрес: 10 Example House, London, United Kingdom",
+    "vatNumber": "VAT номер: GB 000000000",
+    "legalInfo": "Вся информация, представленная на сайте, носит информационный характер и не является публичной офертой, если прямо не указано иное. LONDON ROUTE TRANSFERS принимает разумные меры для обеспечения актуальности и точности информации, однако не несет ответственности за возможные неточности или изменения условий оказания услуг.",
+    "policies": "Политики и документы",
+    "privacyPolicy": "Политика конфиденциальности",
+    "cookiePolicy": "Политика использования cookies",
+    "termsOfUse": "Условия использования",
+    "servicesTerms": "Условия оказания услуг",
+    "contact": "Контакты",
+    "copyright": "© LONDON ROUTE TRANSFERS, 2009–2026. Все права защищены."
+  },
+  "Stub": {
+    "bookTitle": "Забронировать трансфер",
+    "bookDescription": "Заполните форму заявки, и мы свяжемся с вами для подтверждения деталей.",
+    "managerTitle": "Панель менеджера",
+    "managerDescription": "Внутренний интерфейс для просмотра заявок на бронирование.",
+    "privacyTitle": "Политика конфиденциальности",
+    "privacyDescription": "Политика конфиденциальности LONDON ROUTE TRANSFERS в соответствии с UK GDPR.",
+    "cookiesTitle": "Политика использования cookies",
+    "cookiesDescription": "Как LONDON ROUTE TRANSFERS использует файлы cookies и аналогичные технологии.",
+    "termsTitle": "Условия использования",
+    "termsDescription": "Условия использования сайта LONDON ROUTE TRANSFERS.",
+    "servicesTermsTitle": "Условия оказания услуг",
+    "servicesTermsDescription": "Условия оказания транспортных услуг LONDON ROUTE TRANSFERS.",
+    "pageUnderConstruction": "Эта страница находится в разработке."
+  }
+}
