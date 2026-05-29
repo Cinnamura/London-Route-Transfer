@@ -140,5 +140,377 @@
     "servicesTermsTitle": "Service Terms",
     "servicesTermsDescription": "Terms and conditions for the provision of transport services by LONDON ROUTE TRANSFERS.",
     "pageUnderConstruction": "This page is under construction."
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "description": "LONDON ROUTE TRANSFERS privacy policy in accordance with UK GDPR — how we collect, use and protect your personal data.",
+    "sections": [
+      {
+        "h": "1. General Information",
+        "p": "This Privacy Policy describes how LONDON ROUTE TRANSFERS processes personal data of website users.",
+        "items": [
+          "Company: LONDON ROUTE TRANSFERS LTD",
+          "Jurisdiction: England and Wales",
+          "Company Number: 00000000",
+          "Registered Office: 10 Example House, London, United Kingdom",
+          "LONDON ROUTE TRANSFERS is a data controller in accordance with the requirements of UK GDPR."
+        ]
+      },
+      {
+        "h": "2. What Data We Collect",
+        "p": "We may collect the following categories of data:",
+        "items": [
+          "Full name",
+          "Contact telephone number",
+          "Email address",
+          "Trip information: route, date, time, number of passengers",
+          "Messages sent through the website forms"
+        ]
+      },
+      {
+        "h": "3. Purposes of Data Processing",
+        "p": "Personal data is used for:",
+        "items": [
+          "Processing enquiries and requests",
+          "Organising and performing transport services",
+          "Communicating with the client",
+          "Internal administration"
+        ]
+      },
+      {
+        "h": "4. Legal Bases for Processing",
+        "p": "Data processing is carried out on the following legal bases:",
+        "items": [
+          "Performance of a contract or steps taken prior to entering into a contract",
+          "Legitimate interests of the company: processing enquiries, managing services"
+        ]
+      },
+      {
+        "h": "5. Data Transfer to Third Parties",
+        "p": "We may transfer data to:",
+        "items": [
+          "Drivers and transport partners",
+          "Contractors involved in performing the service"
+        ],
+        "p": "Transfer is made solely to the extent necessary for the provision of the service."
+      },
+      {
+        "h": "6. Data Retention",
+        "p": "Personal data is retained no longer than necessary for the purposes of its processing or as required by law."
+      },
+      {
+        "h": "7. User Rights",
+        "p": "The user has the right to:",
+        "items": [
+          "Access their data",
+          "Request rectification of data",
+          "Request erasure of data",
+          "Restrict processing",
+          "Object to processing"
+        ]
+      },
+      {
+        "h": "8. Data Security",
+        "p": "The company takes reasonable technical and organisational measures to protect personal data."
+      },
+      {
+        "h": "9. Contact Regarding Data",
+        "p": "For enquiries relating to data processing, the user may contact LONDON ROUTE TRANSFERS using the contact details provided on the website."
+      },
+      {
+        "h": "10. Changes to This Policy",
+        "p": "The company reserves the right to make changes to this Policy."
+      }
+    ]
+  },
+  "Cookies": {
+    "title": "Cookie Policy",
+    "description": "How LONDON ROUTE TRANSFERS uses cookies and similar technologies on its website.",
+    "sections": [
+      {
+        "h": "1. General Information",
+        "p": "This Cookie Policy explains how LONDON ROUTE TRANSFERS uses cookies and similar technologies on its website.",
+        "items": [
+          "The use of cookies is governed by:",
+          "UK GDPR",
+          "Privacy and Electronic Communications Regulations (PECR)"
+        ]
+      },
+      {
+        "h": "2. What Are Cookies",
+        "p": "Cookies are small text files that are stored on a user's device when visiting a website. They enable the website to recognise the user's device and remember certain information.",
+        "items": [
+          "Session cookies — deleted after the browser is closed",
+          "Persistent cookies — remain on the device for a specified period"
+        ]
+      },
+      {
+        "h": "3. What Cookies We Use",
+        "p": "Strictly necessary cookies are required for the proper functioning of the website and do not require user consent. They are used to ensure basic website functionality, preserve user preferences and maintain security.",
+        "items": [
+          "Analytics cookies are used to analyse user behaviour and improve website performance. These cookies are only used with the user's consent.",
+          "Functional cookies allow the website to remember user preferences such as language or interface settings. They are only used with consent unless they are strictly necessary."
+        ]
+      },
+      {
+        "h": "4. Legal Basis for Using Cookies",
+        "p": "Strictly necessary cookies are used on the basis of legitimate interest. All other cookies are used solely on the basis of user consent."
+      },
+      {
+        "h": "5. Obtaining Consent",
+        "p": "Upon first visiting the website, a cookie banner is displayed enabling the user to:",
+        "items": [
+          "Accept all cookies",
+          "Reject all non-essential cookies",
+          "Customise cookie categories"
+        ],
+        "p": "Cookies other than strictly necessary ones are not set until consent is obtained."
+      },
+      {
+        "h": "6. Managing Cookies",
+        "p": "The user may at any time:",
+        "items": [
+          "Change cookie settings through the website interface",
+          "Delete cookies through browser settings",
+          "Block cookies at the browser level"
+        ],
+        "p": "Disabling cookies may affect website functionality."
+      },
+      {
+        "h": "7. Third-Party Cookies",
+        "p": "We may use third-party services, such as analytics tools, that set cookies on their own behalf. Such third parties process data in accordance with their own privacy policies."
+      },
+      {
+        "h": "8. Cookie Retention Period",
+        "p": "The retention period of cookies depends on their type:",
+        "items": [
+          "Session cookies are deleted after the browser is closed",
+          "Persistent cookies are stored for a limited period or until deleted by the user"
+        ]
+      },
+      {
+        "h": "9. Changes to This Policy",
+        "p": "LONDON ROUTE TRANSFERS reserves the right to update this Policy at any time. The current version is always available on the website."
+      },
+      {
+        "h": "10. Contact Information",
+        "p": "For enquiries relating to the use of cookies, you may contact LONDON ROUTE TRANSFERS using the contact details provided on the website."
+      }
+    ]
+  },
+  "Terms": {
+    "title": "Terms of Use",
+    "description": "Terms and conditions for using the LONDON ROUTE TRANSFERS website.",
+    "sections": [
+      {
+        "h": "1. General Provisions",
+        "p": "These Terms of Use govern access to and use of this website, which is owned by LONDON ROUTE TRANSFERS.",
+        "items": [
+          "By using this website, the user confirms that they have read these Terms and accept them in full.",
+          "If the user does not agree with these Terms, they must cease using the website."
+        ]
+      },
+      {
+        "h": "2. Company Information",
+        "p": "LONDON ROUTE TRANSFERS LTD, Private Limited Company, registered in England and Wales.",
+        "items": [
+          "Company Number: 00000000",
+          "Registered Office: 10 Example House, London, United Kingdom",
+          "VAT Number: GB 000000000"
+        ]
+      },
+      {
+        "h": "3. Purpose of the Website",
+        "p": "The website is intended for:",
+        "items": [
+          "Providing information about LONDON ROUTE TRANSFERS transport services",
+          "Receiving client enquiries",
+          "Initial communication with users"
+        ],
+        "p": "The website is not a platform for entering into automated contracts."
+      },
+      {
+        "h": "4. No Public Offer",
+        "p": "All information published on the website is for informational purposes only and does not constitute a public offer or a legally binding proposal. A contract for the provision of services is concluded separately after agreeing terms with the client."
+      },
+      {
+        "h": "5. Use of the Website",
+        "p": "The user undertakes to:",
+        "items": [
+          "Use the website solely for lawful purposes",
+          "Not take any action aimed at disrupting the operation of the website",
+          "Not use the website to transmit malicious code or gain unauthorised access",
+          "Not attempt to gain access to the website's systems"
+        ]
+      },
+      {
+        "h": "6. Limitation of Liability",
+        "p": "LONDON ROUTE TRANSFERS does not guarantee that the website will operate continuously or without errors, or that the information on the website is always complete and up to date.",
+        "items": [
+          "The company shall not be liable for any losses arising from the use of the website, technical failures or temporary unavailability of the website.",
+          "To the fullest extent permitted by the laws of England and Wales, the liability of LONDON ROUTE TRANSFERS is excluded."
+        ]
+      },
+      {
+        "h": "7. Information and Website Content",
+        "p": "LONDON ROUTE TRANSFERS makes reasonable efforts to ensure the accuracy of information but does not guarantee its completeness or currency. The company reserves the right to change the content of the website without prior notice."
+      },
+      {
+        "h": "8. Intellectual Property",
+        "p": "All materials published on the website, including texts, design, graphics and logos, are the property of LONDON ROUTE TRANSFERS or are used on a lawful basis. Any use of these materials without written permission is prohibited."
+      },
+      {
+        "h": "9. Links to Third-Party Resources",
+        "p": "The website may contain links to third-party websites. LONDON ROUTE TRANSFERS does not control and assumes no responsibility for the content of such websites."
+      },
+      {
+        "h": "10. Privacy and Cookies",
+        "p": "The use of personal data is governed by:",
+        "items": [
+          "The Privacy Policy",
+          "The Cookie Policy"
+        ]
+      },
+      {
+        "h": "11. Changes to These Terms",
+        "p": "LONDON ROUTE TRANSFERS may change these Terms at any time. The current version is published on the website. Continued use of the website constitutes acceptance of the updated Terms."
+      },
+      {
+        "h": "12. Applicable Law",
+        "p": "These Terms are governed by the laws of England and Wales. All disputes shall be subject to the jurisdiction of the courts of England and Wales."
+      }
+    ]
+  },
+  "ServicesTerms": {
+    "title": "Service Terms",
+    "description": "Terms and conditions for the provision of transport services by LONDON ROUTE TRANSFERS.",
+    "sections": [
+      {
+        "h": "1. General Provisions",
+        "p": "These Terms govern the provision of transport services by LONDON ROUTE TRANSFERS. By ordering services, the client confirms acceptance of these Terms."
+      },
+      {
+        "h": "2. Company Information",
+        "p": "LONDON ROUTE TRANSFERS LTD, Private Limited Company, registered in England and Wales.",
+        "items": [
+          "Company Number: 00000000",
+          "Registered Office: 10 Example House, London, United Kingdom",
+          "VAT Number: GB 000000000"
+        ]
+      },
+      {
+        "h": "3. Services",
+        "p": "The company provides:",
+        "items": [
+          "Airport transfers",
+          "Corporate transport",
+          "Group transport",
+          "Private travel and event services"
+        ],
+        "p": "All services are performed on the basis of pre-agreed terms."
+      },
+      {
+        "h": "4. Booking and Confirmation",
+        "p": "",
+        "items": [
+          "A client enquiry does not constitute a confirmed booking",
+          "A booking is considered confirmed only after all terms have been agreed",
+          "The company reserves the right to decline an enquiry without providing a reason"
+        ]
+      },
+      {
+        "h": "5. Pricing and Payment",
+        "p": "",
+        "items": [
+          "Pricing is determined on an individual basis",
+          "Payment shall be made in accordance with the agreed terms",
+          "The company may request an advance payment"
+        ]
+      },
+      {
+        "h": "6. Cancellation and Amendments",
+        "p": "",
+        "items": [
+          "Cancellation or amendments must be communicated in advance",
+          "In the event of late cancellation, the company may retain part or all of the service fee",
+          "Cancellation terms may vary depending on the specific order"
+        ]
+      },
+      {
+        "h": "7. No-Show",
+        "p": "If the client fails to appear at the agreed time and location:",
+        "items": [
+          "The order shall be deemed fulfilled",
+          "No refund shall be issued"
+        ],
+        "p": "For airport transfers, the driver shall wait for a reasonable period after the flight's scheduled landing time."
+      },
+      {
+        "h": "8. Waiting Time",
+        "p": "",
+        "items": [
+          "Waiting time may be included in the price or charged separately",
+          "Additional waiting time is charged separately"
+        ]
+      },
+      {
+        "h": "9. Flight Delays",
+        "p": "For airport transfers, the company monitors flight status. In the event of a delay, vehicle dispatch shall be adjusted where possible. The company shall not be liable for delays caused by third parties."
+      },
+      {
+        "h": "10. Client Responsibility",
+        "p": "The client is obliged to:",
+        "items": [
+          "Provide accurate trip information",
+          "Comply with conduct rules",
+          "Not cause damage to the vehicle"
+        ],
+        "p": "In the event of damage, the client shall be liable for compensation."
+      },
+      {
+        "h": "11. Luggage",
+        "p": "",
+        "items": [
+          "The client must inform the company in advance of the quantity and type of luggage",
+          "The company shall not be liable for loss of or damage to luggage"
+        ]
+      },
+      {
+        "h": "12. Passenger Conduct",
+        "p": "The company reserves the right to refuse carriage if:",
+        "items": [
+          "The passenger's conduct poses a threat",
+          "The passenger is in a condition that prevents safe carriage"
+        ]
+      },
+      {
+        "h": "13. Use of Subcontractors",
+        "p": "The company is entitled to engage third parties to perform services. LONDON ROUTE TRANSFERS remains the responsible operator vis-à-vis the client."
+      },
+      {
+        "h": "14. Limitation of Liability",
+        "p": "To the fullest extent permitted by law:",
+        "items": [
+          "The company shall not be liable for indirect losses",
+          "The company shall not be liable for delays caused by traffic conditions, weather or the actions of third parties"
+        ]
+      },
+      {
+        "h": "15. Force Majeure",
+        "p": "The company shall not be liable for non-performance of obligations arising from circumstances beyond its reasonable control."
+      },
+      {
+        "h": "16. Privacy",
+        "p": "The processing of personal data is carried out in accordance with the Privacy Policy."
+      },
+      {
+        "h": "17. Applicable Law",
+        "p": "These Terms are governed by the laws of England and Wales."
+      },
+      {
+        "h": "18. Changes to These Terms",
+        "p": "The company reserves the right to amend these Terms. The current version is published on the website."
+      }
+    ]
   }
 }
