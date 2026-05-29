@@ -10,7 +10,7 @@ export function getBookingSchema(t: (key: string) => string) {
     phone: z
       .string()
       .min(1, t('phoneRequired'))
-      .regex(/^[\d\s\-\+\(\)]+$/, t('phoneInvalid')),
+      .regex(/^[\d\s\-\+\(\)]{10,15}$/, t('phoneInvalid')),
     email: z
       .string()
       .min(1, t('emailRequired'))
