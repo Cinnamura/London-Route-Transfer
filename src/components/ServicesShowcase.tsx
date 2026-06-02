@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
+import CarScrollAnimation from './ui/CarScrollAnimation'
 
 const services = [
   {
@@ -39,7 +40,8 @@ export default function ServicesShowcase() {
   }
 
   return (
-    <section id="services" className="bg-white">
+    <section id="services" className="relative bg-white">
+      <CarScrollAnimation />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="max-w-2xl mb-14">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-slate-900 tracking-tight">

@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import HeroSection from '@/components/HeroSection'
 import ServicesShowcase from '@/components/ServicesShowcase'
 import AnimateIn from '@/components/ui/AnimateIn'
+import BusAnimation from '@/components/ui/BusAnimation'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -31,18 +32,21 @@ export default async function HomePage() {
 
       {/* Block 2 — About */}
       <AnimateIn>
-        <section className="bg-slate-50/50">
+        <section className="relative bg-slate-50/50">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-            <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-slate-900 tracking-tight">
-                {t('aboutTitle')}
-              </h2>
-              <p className="mt-4 text-lg text-sky-600 font-medium">
-                {t('aboutSubtitle')}
-              </p>
-              <p className="mt-6 text-base md:text-lg text-slate-600 leading-relaxed">
-                {t('aboutText')}
-              </p>
+            <div className="flex items-center justify-between gap-4">
+              <div className="max-w-3xl">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-slate-900 tracking-tight">
+                  {t('aboutTitle')}
+                </h2>
+                <p className="mt-4 text-lg text-sky-600 font-medium">
+                  {t('aboutSubtitle')}
+                </p>
+                <p className="mt-6 text-base md:text-lg text-slate-600 leading-relaxed">
+                  {t('aboutText')}
+                </p>
+              </div>
+              <BusAnimation />
             </div>
           </div>
         </section>
