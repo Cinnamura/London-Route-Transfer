@@ -11,5 +11,5 @@ export function proxy(request: NextRequest) {
 export default proxy
 
 export const config = {
-  matcher: ['/', '/(ru|en)/:path*', '/((?!_next|api|assets|.*\\..*).*)'],
+  matcher: ['/((?!_next|icon|.*\\.(?:html|js|css|png|jpg|jpeg|svg|gif|ico|webmanifest)).*)'],
 }
