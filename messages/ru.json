@@ -510,6 +510,21 @@
     "serviceCorporate": "Корпоративный",
     "serviceGroup": "Групповой",
     "servicePrivate": "Частный",
-    "createdLabel": "Создана"
+    "createdLabel": "Создана",
+    "summary": "{count} из {total} заявок",
+    "summaryPending": "{count} в ожидании",
+    "cardDetails": "Детали",
+    "cardStatus": "Статус",
+    "detailClient": "Клиент",
+    "detailTrip": "Поездка",
+    "detailNotes": "Заметки",
+    "detailActions": "Действия",
+    "detailMeetGreet": "Встреча",
+    "detailPassengers": "пасс.",
+    "detailFlight": "Рейс",
+    "detailCreated": "Создана",
+    "detailAt": "в",
+    "detailYes": "Да",
+    "detailNo": "Нет"
   }
 }

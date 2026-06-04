@@ -540,6 +540,21 @@
     "serviceCorporate": "Corporate",
     "serviceGroup": "Group",
     "servicePrivate": "Private",
-    "createdLabel": "Created"
+    "createdLabel": "Created",
+    "summary": "{count} of {total} bookings",
+    "summaryPending": "{count} pending",
+    "cardDetails": "Details",
+    "cardStatus": "Status",
+    "detailClient": "Client",
+    "detailTrip": "Trip",
+    "detailNotes": "Notes",
+    "detailActions": "Actions",
+    "detailMeetGreet": "Meet & Greet",
+    "detailPassengers": "passengers",
+    "detailFlight": "Flight",
+    "detailCreated": "Created",
+    "detailAt": "at",
+    "detailYes": "Yes",
+    "detailNo": "No"
   }
 }
