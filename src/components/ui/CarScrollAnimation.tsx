@@ -55,9 +55,16 @@ export default function CarScrollAnimation() {
       const current = vh - rect.top
       const p = Math.max(0, Math.min(1, current / totalDist))
 
-      const maxTranslate = Math.max(0, trackWidthRef.current)
-      const translateX = maxTranslate * p * 0.55
-      const opacity = p < 0.35 ? 1 : Math.max(0, 1 - (p - 0.35) / 0.65)
+      const travelStart = 0.2                      // 0–30% скролла — стоит                                                                                                                                                                   
+     const travelP = p < travelStart               // считаем прогресс движения отдельно                                                                                                                                                      
+       ? 0                                                                                                                                                                                                                                    
+       : (p - travelStart) / (1 - travelStart)                                                                                                                                                                                                
+                                                                                                                                                                                                                                              
+     const maxTranslate = Math.max(0, trackWidthRef.current)                                                                                                                                                                                  
+     const translateX = maxTranslate * travelP * 1.5                                                                                                                                                                                          
+     const opacity = travelP < 0.35                                                                                                                                                                                                           
+       ? 1                                                                                                                                                                                                                                    
+       : Math.max(0, 1 - (travelP - 0.35) / 0.65)
 
       carRef.current.style.transform = `translate3d(${translateX}px, 0, 0)`
       carRef.current.style.opacity = String(opacity)
