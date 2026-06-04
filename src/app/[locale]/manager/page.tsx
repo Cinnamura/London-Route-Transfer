@@ -1,17 +1,36 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useTranslations } from 'next-intl'
-import { mockBookings, type BookingStatus, type BookingManagerItem } from '@/mocks/bookings'
+import type { BookingStatus, BookingManagerItem } from '@/types/booking'
+import { getBookings, updateBookingStatus, ApiError } from '@/lib/api'
 import BookingCard from '@/components/manager/BookingCard'
 import BookingDetailModal from '@/components/manager/BookingDetailModal'
 import ManagerFilters from '@/components/manager/ManagerFilters'
 
 export default function ManagerPage() {
   const t = useTranslations('Manager')
-  const [bookings, setBookings] = useState(mockBookings)
+  const [bookings, setBookings] = useState<BookingManagerItem[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [filter, setFilter] = useState<BookingStatus | 'all'>('all')
   const [selectedBooking, setSelectedBooking] = useState<BookingManagerItem | null>(null)
+
+  const fetchBookings = useCallback(async () => {
+    setError(null)
+    try {
+      const data = await getBookings()
+      setBookings(data)
+    } catch (err) {
+      setError(err instanceof ApiError ? err.message : 'Failed to load bookings')
+    } finally {
+      setLoading(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    fetchBookings()
+  }, [fetchBookings])
 
   const filtered = filter === 'all'
     ? bookings
@@ -24,10 +43,13 @@ export default function ManagerPage() {
     cancelled: bookings.filter((b) => b.status === 'cancelled').length,
   }
 
-  function changeStatus(id: string, status: BookingStatus) {
-    setBookings((prev) =>
-      prev.map((b) => (b.id === id ? { ...b, status } : b))
-    )
+  async function changeStatus(id: string, status: BookingStatus) {
+    try {
+      const updated = await updateBookingStatus(id, status)
+      setBookings((prev) => prev.map((b) => (b.id === id ? updated : b)))
+    } catch {
+      // silently fail; could show a toast in a real app
+    }
   }
 
   const serviceLabels: Record<string, string> = {
@@ -70,8 +92,25 @@ export default function ManagerPage() {
           />
         </div>
 
-        {/* Cards grid */}
-        {filtered.length === 0 ? (
+        {/* Error */}
+        {error && (
+          <div className="mb-8 bg-rose-50 border border-rose-200 text-rose-700 text-sm rounded-xl px-5 py-4 text-center">
+            {error}
+            <button
+              onClick={fetchBookings}
+              className="ml-3 underline hover:no-underline"
+            >
+              Retry
+            </button>
+          </div>
+        )}
+
+        {/* Loading */}
+        {loading ? (
+          <div className="bg-white/60 backdrop-blur-md border border-white/40 rounded-2xl p-12 text-center shadow-sm">
+            <p className="text-slate-400">Loading…</p>
+          </div>
+        ) : filtered.length === 0 ? (
           <div className="bg-white/60 backdrop-blur-md border border-white/40 rounded-2xl p-12 text-center shadow-sm">
             <p className="text-slate-500">{t('noBookings')}</p>
           </div>

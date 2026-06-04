@@ -1,6 +1,6 @@
 'use client'
 
-import type { BookingStatus } from '@/mocks/bookings'
+import type { BookingStatus } from '@/types/booking'
 
 const statusColors: Record<BookingStatus, string> = {
   pending: 'bg-amber-100 text-amber-700 border-amber-200',

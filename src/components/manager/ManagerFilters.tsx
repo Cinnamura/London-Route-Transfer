@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import type { BookingStatus } from '@/mocks/bookings'
+import type { BookingStatus } from '@/types/booking'
 
 type FilterKey = BookingStatus | 'all'
 

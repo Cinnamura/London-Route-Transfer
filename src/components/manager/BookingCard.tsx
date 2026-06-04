@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
-import type { BookingManagerItem, BookingStatus } from '@/mocks/bookings'
+import type { BookingManagerItem, BookingStatus } from '@/types/booking'
 import StatusBadge from './StatusBadge'
 
 const statusAccent: Record<BookingStatus, string> = {

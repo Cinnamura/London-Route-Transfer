@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslations } from 'next-intl'
 import { getBookingSchema, type BookingFormData } from '@/schemas/booking'
+import { createBooking, ApiError } from '@/lib/api'
 
 const serviceTypes = [
   { value: 'airport_transfer', key: 'serviceAirport' },
@@ -17,6 +18,7 @@ export default function BookingFormPage() {
   const t = useTranslations('Form')
   const tErr = useTranslations('FormErrors')
   const [formState, setFormState] = useState<'form' | 'submitting' | 'success'>('form')
+  const [formError, setFormError] = useState<string | null>(null)
 
   useEffect(() => {
     if (formState !== 'form') {
@@ -38,11 +40,18 @@ export default function BookingFormPage() {
     },
   })
 
-  function onSubmit(_data: BookingFormData) {
+  async function onSubmit(data: BookingFormData) {
+    setFormError(null)
     setFormState('submitting')
-    setTimeout(() => {
+    try {
+      const { legalConsent: _, ...payload } = data
+      await createBooking(payload)
       setFormState('success')
-    }, 1800)
+    } catch (err) {
+      const message = err instanceof ApiError ? err.message : 'Something went wrong. Please try again.'
+      setFormError(message)
+      setFormState('form')
+    }
   }
 
   if (formState === 'success') {
@@ -78,6 +87,12 @@ export default function BookingFormPage() {
             {t('description')}
           </p>
         </div>
+
+        {formError && (
+          <div className="mb-8 bg-rose-50 border border-rose-200 text-rose-700 text-sm rounded-xl px-5 py-4 text-center">
+            {formError}
+          </div>
+        )}
 
         <div className={
           formState === 'submitting' ? 'animate-fade-out' : 'animate-fade-in'

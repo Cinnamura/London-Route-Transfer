@@ -13,6 +13,8 @@
 | **next-intl** | 4 | i18n маршрутизация (с/без префикса локали), typed-переводы |
 | **React Hook Form** | — | Управление формой с производительной перерисовкой |
 | **Zod** | 4.4.3 | Валидация форм через `zodResolver` |
+| **NestJS** | 11 | Backend API для бронирований (в `backend/`) |
+| **class-validator** | — | Валидация DTO на backend |
 
 ## Установка и запуск
 
@@ -23,14 +25,24 @@ cd london-route-transfers
 
 # Установка зависимостей
 npm install
+cd backend && npm install && cd ..
 
-# Режим разработки (Turbopack)
+# Режим разработки (два терминала)
+
+# Терминал 1 — Backend (NestJS, порт 4000)
+cd backend && npm run start:dev
+
+# Терминал 2 — Frontend (Next.js, порт 3000)
 npm run dev
 
 # Продакшн-сборка
 npm run build
+cd backend && npm run build && cd ..
 
-# Запуск продакшн-сервера
+# Запуск продакшн-серверов
+# Терминал 1
+cd backend && npm run start
+# Терминал 2
 npm run start
 ```
 
