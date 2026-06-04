@@ -8,13 +8,12 @@ export default function HeroSection() {
   const t = useTranslations('Home')
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-sky-100 via-sky-50 to-white min-h-[80dvh] flex items-center">
+    <section className="relative overflow-hidden bg-gradient-to-b from-sky-100 via-sky-50 to-white min-h-[600px] h-[80dvh] lg:h-[85dvh] flex items-center">
       <ParallaxHero />
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent via-white/40 to-white" />
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-36 w-full">
-        <div className="max-w-3xl">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24 w-full">
+        <div className="max-w-2xl md:max-w-3xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-slate-900 tracking-tight leading-[1.1]">
             {t('heroTitle')}
           </h1>

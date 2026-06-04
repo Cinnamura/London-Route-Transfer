@@ -28,7 +28,7 @@ export default function BusAnimation() {
   return (
     <div
       ref={ref}
-      className="hidden lg:block shrink-0 ml-auto w-80 h-80 xl:w-[25rem] xl:h-[25rem]"
+      className="hidden lg:block shrink-0 ml-auto w-80 h-80 xl:w-[25rem] xl:h-[25rem] relative left-8"
     >
       {shouldLoad && (
         <LottiePlayer
