@@ -77,7 +77,7 @@
   },
   "Form": {
     "title": "Request a Transfer",
-    "description": "Fill in the booking form and we will contact you to confirm the details and agree on terms.",
+    "description": "Submit a request and we will contact you to clarify the trip details and confirm the terms.",
     "contactSection": "Contact Information",
     "fullName": "Full Name",
     "fullNamePlaceholder": "John Smith",
@@ -400,14 +400,13 @@
       },
       {
         "h": "3. Services",
-        "p": "The company provides:",
+        "p": "The company provides the following services. All services are performed on the basis of pre-agreed terms.",
         "items": [
           "Airport transfers",
           "Corporate transport",
           "Group transport",
           "Private travel and event services"
-        ],
-        "p": "All services are performed on the basis of pre-agreed terms."
+        ]
       },
       {
         "h": "4. Booking and Confirmation",
@@ -438,12 +437,11 @@
       },
       {
         "h": "7. No-Show",
-        "p": "If the client fails to appear at the agreed time and location:",
+        "p": "If the client fails to appear at the agreed time and location. For airport transfers, the driver shall wait for a reasonable period after the flight's landing time.",
         "items": [
           "The order shall be deemed fulfilled",
           "No refund shall be issued"
-        ],
-        "p": "For airport transfers, the driver shall wait for a reasonable period after the flight's scheduled landing time."
+        ]
       },
       {
         "h": "8. Waiting Time",
@@ -459,13 +457,12 @@
       },
       {
         "h": "10. Client Responsibility",
-        "p": "The client is obliged to:",
+        "p": "The client is obliged to comply with the following requirements. In the event of damage, the client shall be liable for compensation.",
         "items": [
           "Provide accurate trip information",
           "Comply with conduct rules",
           "Not cause damage to the vehicle"
-        ],
-        "p": "In the event of damage, the client shall be liable for compensation."
+        ]
       },
       {
         "h": "11. Luggage",

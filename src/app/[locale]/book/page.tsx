@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslations } from 'next-intl'
@@ -17,6 +17,12 @@ export default function BookingFormPage() {
   const t = useTranslations('Form')
   const tErr = useTranslations('FormErrors')
   const [formState, setFormState] = useState<'form' | 'submitting' | 'success'>('form')
+
+  useEffect(() => {
+    if (formState !== 'form') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }, [formState])
 
   const {
     register,
