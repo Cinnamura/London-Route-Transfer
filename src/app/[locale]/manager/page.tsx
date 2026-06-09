@@ -48,7 +48,7 @@ export default function ManagerPage() {
       const updated = await updateBookingStatus(id, status)
       setBookings((prev) => prev.map((b) => (b.id === id ? updated : b)))
     } catch {
-      // silently fail; could show a toast in a real app
+      setError(t('changeStatusError'))
     }
   }
 
@@ -100,7 +100,7 @@ export default function ManagerPage() {
               onClick={fetchBookings}
               className="ml-3 underline hover:no-underline"
             >
-              Retry
+              {t('retry')}
             </button>
           </div>
         )}
@@ -108,7 +108,7 @@ export default function ManagerPage() {
         {/* Loading */}
         {loading ? (
           <div className="bg-white/60 backdrop-blur-md border border-white/40 rounded-2xl p-12 text-center shadow-sm">
-            <p className="text-slate-400">Loading…</p>
+            <p className="text-slate-400">{t('loading')}</p>
           </div>
         ) : filtered.length === 0 ? (
           <div className="bg-white/60 backdrop-blur-md border border-white/40 rounded-2xl p-12 text-center shadow-sm">

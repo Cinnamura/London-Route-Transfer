@@ -525,6 +525,9 @@
     "detailCreated": "Создана",
     "detailAt": "в",
     "detailYes": "Да",
-    "detailNo": "Нет"
+    "detailNo": "Нет",
+    "loading": "Загрузка…",
+    "retry": "Повторить",
+    "changeStatusError": "Не удалось обновить статус. Попробуйте ещё раз."
   }
 }

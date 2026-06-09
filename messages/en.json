@@ -552,6 +552,9 @@
     "detailCreated": "Created",
     "detailAt": "at",
     "detailYes": "Yes",
-    "detailNo": "No"
+    "detailNo": "No",
+    "loading": "Loading…",
+    "retry": "Retry",
+    "changeStatusError": "Failed to update status. Please try again."
   }
 }

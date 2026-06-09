@@ -14,7 +14,6 @@ export type BookingManagerItem = {
   passengersCount: number
   meetAndGreet: boolean
   additionalInfo?: string
-  flightNumber?: string
   createdAt: string
   status: BookingStatus
 }

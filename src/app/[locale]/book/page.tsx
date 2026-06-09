@@ -36,7 +36,7 @@ export default function BookingFormPage() {
       company: '',
       additionalInfo: '',
       meetAndGreet: false,
-      legalConsent: false as unknown as true,
+      legalConsent: false,
     },
   })
 

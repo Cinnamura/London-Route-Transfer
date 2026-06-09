@@ -37,7 +37,7 @@ export function getBookingSchema(t: (key: string) => string) {
       .positive(t('passengersMin')),
     meetAndGreet: z.boolean(),
     additionalInfo: z.string().optional(),
-    legalConsent: z.literal(true, { message: t('legalConsentRequired') }),
+    legalConsent: z.boolean().refine((v) => v === true, { message: t('legalConsentRequired') }),
   })
 }
 
